@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Projects from './showcaseComponents/projects';
+import Projects from './showcaseComponents/Projects';
 import Certifications from './showcaseComponents/Certifications';
 import TechStack from './showcaseComponents/TechStack';
 import { IoMdCode } from "react-icons/io";
