@@ -14,14 +14,14 @@ import './index.css'
 function App() {
   const [shapeCount, setShapeCount] = useState(90);
   
-  // const [showContent, setShowContent] = useState(false);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShowContent(true);
-  //     setShapeCount(40);
-  //   }, 4000);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  const [showContent, setShowContent] = useState(false);
+   useEffect(() => {
+  const timer = setTimeout(() => {
+       setShowContent(true);
+     setShapeCount(40);
+    }, 4000);
+     return () => clearTimeout(timer);
+   }, []);
 
 
 
@@ -51,13 +51,13 @@ function App() {
   }, [shapeCount]);
 
 
-  // if (!showContent) {
-  //   return (
-  //     <div className="flex justify-center items-center fixed inset-0 bg-[#48488b]">
-  //       <Preloader/>
-  //     </div>
-  //   );
-  // }
+  if (!showContent) {
+     return (
+     <div className="flex justify-center items-center fixed inset-0 bg-[#48488b]">
+       <Preloader/>
+     </div>
+    );
+  }
 
 
   return (
