@@ -65,9 +65,9 @@ const ProjectDetail = () => {
   }
 
   return (
-    <section className="md:mt-20 mt-15 md:px-24 px-3 py-2 text-white z-10 relative">
+    <section className="md:mt-20 mt-15 2xl:px-32 2xl:mt-24 md:px-24 px-3  pb-5 text-white z-10 relative">
       {/* Breadcrumbs */}
-      <div className='flex flex-wrap md:text-md text-sm gap-5 mb-5 items-center'>
+      <div className='flex flex-wrap 2xl:text-lg 2xl:tracking-wider md:text-md text-sm gap-5 mb-5 items-center'>
         <Link to='/' className='flex gap-1 cursor-pointer items-center bg-white/10 border border-white/20 rounded-lg px-2 py-1 hover:bg-white/20 transition'>
           <IoMdArrowBack /> Back
         </Link>
@@ -78,7 +78,7 @@ const ProjectDetail = () => {
       </div>
 
       {/* Main Content */}
-      <div className='flex flex-col md:flex-row gap-x-10 gap-y-8'>
+      <div className='flex flex-col md:flex-row 2xl:gap-y-12 gap-x-10 gap-y-8'>
         {/* Left Side */}
         <div className='w-full md:w-1/2 flex flex-col gap-2' ref={leftBoxRef}>
           <div className="text-center md:text-left left-animate">
@@ -86,27 +86,27 @@ const ProjectDetail = () => {
               {project.name}
             </span>
             <div className="h-[3px] bg-white w-1/5 mt-1 mb-1.5 md:ml-0" />
-            <p className='text-sm text-start font-light text-white/60'>{project.projectName}</p>
+            <p className='text-sm 2xl:text-md text-start font-light text-white/60'>{project.projectName}</p>
           </div>
 
-          <p className='text-sm leading-relaxed text-justify text-white/80 left-animate'>
+          <p className='text-sm 2xl:text-lg leading-relaxed text-justify text-white/80 left-animate'>
             {project.description}
           </p>
 
-          <div className='flex gap-4 left-animate'>
-            <a href={project.liveDemoLink} className='flex gap-1 bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] text-sm hover:bg-[#1b1b2fd8] cursor-pointer items-center text-white px-4 py-2 rounded-md'>
+          <div className='flex 2xl:text-4xl 2xl:mt-4 gap-4 left-animate'>
+            <a href={project.liveDemoLink} className='flex gap-1 2xl:text-xl  bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] text-sm hover:bg-[#1b1b2fd8] cursor-pointer items-center text-white px-4 py-2 rounded-md'>
               <LuExternalLink /> Live Demo
             </a>
-            <a href={project.githubLink} className='flex gap-1 bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] text-sm hover:bg-[#1b1b2fd8] cursor-pointer items-center text-white px-4 py-2 rounded-md'>
+            <a href={project.githubLink} className='flex gap-1  2xl:text-xl bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] text-sm hover:bg-[#1b1b2fd8] cursor-pointer items-center text-white px-4 py-2 rounded-md'>
               <FiGithub /> GitHub
             </a>
           </div>
 
           <div className='left-animate'>
-            <h2 className="flex items-center gap-2 text-lg font-semibold my-4">
+            <h2 className="flex items-center gap-2  2xl:text-2xl text-lg font-semibold my-4">
               <RiCodeSSlashLine /> Technologies Used
             </h2>
-            <div className='flex flex-wrap md:w-3/4 gap-2'>
+            <div className='flex flex-wrap md:w-1/2 gap-2'>
               {project.technologies.map((tech, idx) => (
                 <span key={idx} className='text-white bg-white/20 md:px-4 md:py-1 px-2 py-1 rounded-2xl text-sm'>
                   {tech}
@@ -131,18 +131,18 @@ const ProjectDetail = () => {
                   <img
                     src={img}
                     alt={`Slide ${idx + 1}`}
-                    className="w-full md:h-[250px] h-[180px] object-fit rounded-sm"
+                    className="w-full md:h-[250px]   2xl:h-[275px]  h-[180px] object-fit rounded-sm"
                   />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
 
-          <div className='bg-black/20 rounded-md border-1 md:px-6 md:py-2 px-3 py-2 border-white/20 text-white md:space-y-1 right-animate'>
-            <h2 className='flex items-center gap-2 text-lg font-semibold my-2'>
+          <div className='bg-black/20 rounded-md   2xl:px-8   2xl:py-4  border-1 md:px-6 md:py-2 px-3 py-2 border-white/20 text-white md:space-y-1 right-animate'>
+            <h2 className='flex items-center gap-2  2xl:text-2xl  text-lg font-semibold my-2'>
               <FaRegStar className='text-amber-200' /> Key Features
             </h2>
-            <ul className='list-disc list-outside pl-5 mt-2 text-sm leading-loose text-white/80'>
+            <ul className='list-disc list-outside pl-5 mt-2  2xl:text-lg  text-sm leading-loose text-white/80'>
               {project.keyFeatures.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}

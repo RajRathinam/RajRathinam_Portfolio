@@ -24,7 +24,7 @@ const Projects = () => {
   }, { scope: container });
 
   return (
-    <section ref={container} className="flex flex-wrap justify-between gap-4 md:py-8 py-2">
+    <section ref={container} className="flex flex-wrap justify-between gap-4 py-2">
       {projects.map((project, index) => (
         <div
           key={index}

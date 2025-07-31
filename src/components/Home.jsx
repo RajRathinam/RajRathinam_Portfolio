@@ -40,18 +40,18 @@ const Home = () => {
   return (
     <main id="home" className="relative z-10 flex justify-around items-center md:h-screen min-h-screen mt-4 md:px-24 px-5 bg-transparent">
 
-      <div ref={leftBoxRef} className='flex flex-col 2xl:gap-6 md:gap-2 gap-3'>
+      <div ref={leftBoxRef} className='flex flex-col 2xl:gap-4 md:gap-2 gap-3'>
 
-        <span className='left-animate animate-bounce 2xl:text-3xl w-fit flex justify-between items-center gap-2 text-white font-extralight shadow-xl bg-white/10 py-2 px-5 rounded-3xl mb-1 md:mb-2'>
-          <AiOutlineRise className="2xl:text-3xl md:text-2xl text-xl text-white" /> Innovating Everyday
+        <span className='left-animate animate-bounce 2xl:text-xl w-fit flex justify-between items-center gap-2 text-white font-extralight shadow-xl bg-white/10 py-2 px-5 rounded-3xl mb-1 md:mb-2'>
+          <AiOutlineRise className="2xl:text-2xl md:text-2xl text-xl text-white" /> Innovating Everyday
         </span>
 
         <div className='flex flex-col'>
-          <span className='left-animate 2xl:text-8xl md:text-6xl text-5xl text-white tracking-wide font-extrabold'>Full-Stack</span>
-          <span className='left-animate 2xl:text-8xl md:text-56xl text-5xl bg-gradient-to-r from-[#b0e0f3] to-[#acaaff] bg-clip-text text-transparent font-extrabold md:mb-1'>Developer</span>
+          <span className='left-animate 2xl:text-6xl md:text-6xl text-5xl text-white tracking-wide font-extrabold'>Full-Stack</span>
+          <span className='left-animate 2xl:text-6xl md:text-56xl text-5xl bg-gradient-to-r from-[#b0e0f3] to-[#acaaff] bg-clip-text text-transparent font-extrabold md:mb-1'>Developer</span>
         </div>
-        <span className='left-animate text-slate-200 2xl:text-3xl md:text-md text-sm font-bold'>Computer Science & Engineering Student</span>
-        <p className="left-animate text-slate-300 mb-2 2xl:text-2xl md:text-sm text-[13px] leading-relaxed">
+        <span className='left-animate text-slate-200 2xl:text-2xl md:text-md text-sm font-bold'>Computer Science & Engineering Student</span>
+        <p className="left-animate text-slate-300 mb-2 2xl:text-xl md:text-sm text-[13px] leading-relaxed">
           Passionate about building seamless user experiences and<br className='hidden md:block'></br> solving real-world problems through code.
         </p>
         <div className='left-animate flex gap-3 mb-2 md:mb-1'>
@@ -61,10 +61,10 @@ const Home = () => {
         </div>
 
         <div className='left-animate flex gap-4 mb-2 md:mb-1'>
-          <a href='#showcase' className='bg-[#0404228e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-2xl 2xl:px-6 2xl:py-3 md:text-md text-[14px]  hover:bg-[#1b1b2fd8] cursor-pointer flex gap-2 items-center text-white px-4 py-2'>
+          <a href='#showcase' className='bg-[#0404228e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-xl 2xl:px-6 2xl:py-3 md:text-md text-[14px]  hover:bg-[#1b1b2fd8] cursor-pointer flex gap-2 items-center text-white px-4 py-2'>
             View Projects <FaCode />
           </a>
-          <a href='#' className='bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-2xl 2xl:px-6 2xl:py-3 md:text-md text-[14px] hover:bg-[#1b1b2fd8] flex cursor-pointer gap-2 items-center text-white px-4 py-2'>
+          <a href='#' className='bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-xl 2xl:px-6 2xl:py-3 md:text-md text-[14px] hover:bg-[#1b1b2fd8] flex cursor-pointer gap-2 items-center text-white px-4 py-2'>
             Contact Me <MdOutlineContactMail />
           </a>
         </div>
@@ -76,7 +76,7 @@ const Home = () => {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/20 p-2 rounded-2xl hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-4xl 2xl:p-4 md:text-2xl text-2xl text-white hover:bg-[#1b1b2f8e]"
+              className="bg-white/20 p-2 rounded-2xl hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-2xl 2xl:p-4 md:text-2xl text-2xl text-white hover:bg-[#1b1b2f8e]"
             >
               {item.icon}
             </a>
@@ -92,7 +92,7 @@ const Home = () => {
         <img
           src="/ProgrammingLg.gif"
           alt="Programming Large"
-          className='hidden 2xl:block w-[700px] h-[700px] object-contain'
+          className='hidden 2xl:block w-[550px] h-[550px] object-contain'
         />
       </div>
 

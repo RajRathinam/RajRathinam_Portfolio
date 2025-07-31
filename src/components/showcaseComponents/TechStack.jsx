@@ -43,7 +43,7 @@ const TechStack = () => {
   ];
 
   return (
-    <section ref={stackRef} className="flex flex-col md:py-8 py-2 items-center">
+    <section ref={stackRef} className="flex flex-col py-2 items-center">
       <div className="flex flex-wrap justify-center gap-6 2xl:max-w-7xl max-w-6xl w-full">
         {techStack.map((tech, index) => (
           <div

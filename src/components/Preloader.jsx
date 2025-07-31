@@ -37,17 +37,17 @@ export default function Preloader() {
 
                 <div className="flex justify-around gap-4">
                     {icons.map((Icon, index) => (
-                        <div key={index} className="bg-white/20 p-3  left-animate rounded-2xl">
-                            <Icon className="md:text-2xl text-xl text-white" />
+                        <div key={index} className="bg-white/20 2xl:p-5 p-3  left-animate rounded-2xl">
+                            <Icon className="2xl:text-4xl md:text-2xl text-xl text-white" />
                         </div>
                     ))}
                 </div>
 
 
-                <h1 className="text-white font-extrabold md:text-3xl text-2xl tracking-wider font-poppins left-animate">
+                <h1 className="text-white font-extrabold 2xl:text-5xl md:text-3xl text-2xl tracking-wider font-poppins left-animate">
                     Welcome To My
                 </h1>
-                <h1 className="bg-gradient-to-r left-animate from-[#b0e0f3] to-[#acaaff] bg-clip-text text-transparent font-extrabold tracking-wide text-2xl md:text-3xl">
+                <h1 className="bg-gradient-to-r left-animate 2xl:text-5xl from-[#b0e0f3] to-[#acaaff] bg-clip-text text-transparent font-extrabold tracking-wide text-2xl md:text-3xl">
                     Portfolio Website
                 </h1>
                 <BarLoader className="m-auto md:mt-2" color="#acaaff" height={4} width={100} />

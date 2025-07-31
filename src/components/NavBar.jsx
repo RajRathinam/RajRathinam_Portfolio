@@ -49,7 +49,7 @@ const NavBar = () => {
   return (
     <header
       className={`fixed left-0 top-0 right-0 z-20 flex justify-between 
-        2xl:px-32 2xl:py-8 md:px-24 md:py-4 px-5 py-4 items-center
+        2xl:px-32 2xl:py-4 md:px-24 md:py-4 px-5 py-4 items-center
         transition-shadow duration-300
         ${isScrolled ? 'backdrop-blur-md shadow-[0_4px_8px_rgba(255,255,255,0.4)]' : 'bg-transparent shadow-none'}`}
     >
@@ -67,7 +67,7 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               offset={scrollOffset}
-              className="relative text-white 2xl:text-2xl group-hover:text-[#acaaffcc] 
+              className="relative text-white 2xl:text-xl 2xl:font-extralight group-hover:text-[#acaaffcc] 
               after:content-[''] after:absolute after:left-0 after:-bottom-1 
               after:w-0 after:h-[2px] after:bg-[#acaaff] after:transition-all 
               after:duration-300 group-hover:after:w-full cursor-pointer"

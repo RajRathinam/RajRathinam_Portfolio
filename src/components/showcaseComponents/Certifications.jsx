@@ -28,7 +28,7 @@ const Certifications = () => {
   ];
 
   return (
-    <section ref={containerRef} className="flex flex-wrap justify-between gap-4 md:py-8 py-2">
+    <section ref={containerRef} className="flex flex-wrap justify-between gap-4 py-2">
       {certificates.map((certificate, index) => (
         <div
           key={index}

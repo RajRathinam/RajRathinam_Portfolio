@@ -22,11 +22,11 @@ export const ProjectProvider = ({ children }) => {
       ],
       technologies: [
         "React",
-        "Tailwind CSS",
         "Vite",
+        "Tailwind CSS",
+        "MongoDB",
         "Node.js",
         "Express.js",
-        "MongoDB",
         "Cloudinary"
       ],
       liveDemoLink: "https://permiso-vanilla-1.onrender.com/",
@@ -58,9 +58,9 @@ export const ProjectProvider = ({ children }) => {
       technologies: [
         "React",
         "Tailwind CSS",
+        "MongoDB",
         "Node.js",
         "Express.js",
-        "MongoDB",
         "Socket.IO",
         "JWT"
       ],
@@ -93,11 +93,11 @@ export const ProjectProvider = ({ children }) => {
       technologies: [
         "React",
         "Tailwind CSS",
+        "MongoDB",
         "Node.js",
         "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "bcrypt"
+        "bcrypt",
+        "Mongoose"
       ],
       liveDemoLink: "https://vedhaclothing.in/",
       githubLink: "https://github.com/RajRathinam/VedhaClothing",

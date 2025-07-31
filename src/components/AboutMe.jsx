@@ -31,7 +31,7 @@ const AboutMe = () => {
       icon: <IoMdCode />,
       title: "Problem Solved",
       count: "1000+",
-      description: "Solved coding problems on platforms like Skillrack, LeetCode, and HackerRank to improve logical thinking.",
+      description: "Solved coding problems on platforms like Skillrack.",
     },
   ];
 
@@ -116,11 +116,11 @@ const AboutMe = () => {
       className="min-h-screen mt-4 2xl:px-10 2xl:py-9 2xl:gap-10 md:px-5 md:py-7 px-3 py-2 flex flex-col  gap-5 md:gap-6 bg-transparent"
     >
 
-      <div className="flex flex-col items-center 2xl:mb-5 text-center">
-        <h1 className="2xl:text-5xl md:text-3xl text-2xl bg-gradient-to-r from-[#b0e0f3] to-[#acaaff] bg-clip-text text-transparent font-bold mb-1">
+      <div className="flex flex-col items-center 2xl:mb-1 text-center">
+        <h1 className="2xl:text-4xl md:text-3xl text-2xl bg-gradient-to-r from-[#b0e0f3] to-[#acaaff] bg-clip-text text-transparent font-bold mb-1">
           About Me
         </h1>
-        <p className="flex items-center 2xl:tracking-widest 2xl:mt-3 text-white font-extralight 2xl:text-xl text-[12px] gap-2">
+        <p className="flex items-center 2xl:tracking-widest 2xl:mt-1 text-white 2xl:text-white/40 font-extralight 2xl:text-xl text-[12px] gap-2">
           <TbNorthStar className="text-[#acaaff]" />
           Transforming ideas into digital experiences
           <TbNorthStar className="text-[#acaaff]" />
@@ -130,22 +130,22 @@ const AboutMe = () => {
 
       <div className="flex flex-col-reverse md:flex-row md:px-28 gap-3 justify-between items-center">
 
-        <div ref={boxRef1} className="max-w-lg 2xl:max-w-2xl text-center md:text-left 2xl:space-y-6 space-y-2">
-          <h2 className="left-animate poppins 2xl:text-5xl md:text-3xl text-2xl bg-gradient-to-r from-[#b0e0f3] via-[#acaaff] to-[#6464c4] bg-clip-text text-transparent font-bold">
+        <div ref={boxRef1} className="max-w-lg 2xl:max-w-2xl text-center md:text-left 2xl:space-y-4 space-y-2">
+          <h2 className="left-animate poppins 2xl:text-4xl md:text-3xl text-2xl bg-gradient-to-r from-[#b0e0f3] via-[#acaaff] to-[#6464c4] bg-clip-text text-transparent font-bold">
             Hello, I'm
           </h2>
-          <h3 className="text-white left-animate flex md:justify-start justify-center items-center poppins font-bold 2xl:text-5xl md:text-3xl text-xl">
+          <h3 className="text-white left-animate flex md:justify-start justify-center items-center poppins font-bold 2xl:text-4xl md:text-3xl text-xl">
             {displayedText}
             <span className="blinking-cursor text-md font-extralight">|</span>
           </h3>
-          <p className="left-animate text-white 2xl:text-2xl md:text-md text-[13px] font-extralight text-justify leading-relaxed">
+          <p className="left-animate text-white 2xl:text-xl md:text-md text-[13px] font-extralight text-justify leading-relaxed">
             I love transforming ideas into reality through clean, scalable code
             and thoughtful design. Whether it’s developing interactive UIs,
             optimizing performance, or bringing creative animations to life, my
             goal is to deliver impactful solutions that truly stand out.
           </p>
 
-          <div className="left-animate flex justify-between mt-5 md:mt-5 md:justify-start">
+          <div className="left-animate flex justify-between mt-5 md:mt-5 md:gap-3 md:justify-start">
             <a
               href="/Raj_Rathinam_Resume.pdf"
               download
@@ -177,7 +177,7 @@ const AboutMe = () => {
           <img
             src="/raj.webp"
             alt="Raj"
-            className="2xl:w-[400px] 2xl:h-[400px] md:w-64 md:h-64 w-52 h-52 object-cover rounded-lg 
+            className="2xl:w-[300px] 2xl:h-[300px] md:w-64 md:h-64 w-52 h-52 object-cover rounded-lg 
             shadow-[0_4px_20px_rgba(0,0,0,0.4)] 
             hover:scale-110 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] 
             transition-transform duration-500 ease-in-out"
@@ -193,7 +193,7 @@ const AboutMe = () => {
                 <div className="p-2 bg-white/20 rounded-lg text-sm 2xl:text-2xl md:text-sm">{i.count}</div>
               </div>
               <p className="text-sm md:text-md 2xl:text-2xl font-light tracking-wider">{i.title}</p>
-              <p className="text-[10px] 2xl:text-xl font-extralight tracking-widest text-white/70">{i.description}</p>
+              <p className="text-[10px] 2xl:text-lg font-extralight tracking-widest text-white/70">{i.description}</p>
             </div>
           ))
         }
