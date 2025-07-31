@@ -25,21 +25,21 @@ const TechStack = () => {
   }, []);
 
   const techStack = [
-    { icon: "/techstack/Java.png", name: "Java", percentage: 80 },
-    { icon: "/techstack/JavaScript.png", name: "JavaScript", percentage: 50 },
-    { icon: "/techstack/Python.png", name: "Python", percentage: 50 },
-    { icon: "/techstack/React.png", name: "React", percentage: 60 },
-    { icon: "/techstack/Express.png", name: "Express", percentage: 60 },
-    { icon: "/techstack/Mongoose.js.png", name: "Mongoose", percentage: 50 },
-    { icon: "/techstack/Tailwind CSS.png", name: "Tailwind CSS", percentage: 65 },
-    { icon: "/techstack/Bootstrap.png", name: "Bootstrap", percentage: 60 },
-    { icon: "/techstack/Vite.js.png", name: "Vite", percentage: 65 },
-    { icon: "/techstack/MongoDB.png", name: "MongoDB", percentage: 65 },
-    { icon: "/techstack/Node.js.png", name: "Node.js", percentage: 70 },
-    { icon: "/techstack/Git.png", name: "Git", percentage: 50 },
-    { icon: "/techstack/GitHub.png", name: "GitHub", percentage: 70 },
-    { icon: "/techstack/Postman.png", name: "Postman", percentage: 65 },
-    { icon: "/techstack/Visual Studio Code (VS Code).png", name: "VS Code", percentage: 75 }
+    { icon: "/techstacks/Java.webp", name: "Java", percentage: 80 },
+    { icon: "/techstacks/JavaScript.webp", name: "JavaScript", percentage: 50 },
+    { icon: "/techstacks/Python.webp", name: "Python", percentage: 50 },
+    { icon: "/techstacks/React.webp", name: "React", percentage: 60 },
+    { icon: "/techstacks/Express.webp", name: "Express", percentage: 60 },
+    { icon: "/techstacks/Mongoose.js.webp", name: "Mongoose", percentage: 50 },
+    { icon: "/techstacks/Tailwind CSS.webp", name: "Tailwind CSS", percentage: 65 },
+    { icon: "/techstacks/Bootstrap.webp", name: "Bootstrap", percentage: 60 },
+    { icon: "/techstacks/Vite.js.webp", name: "Vite", percentage: 65 },
+    { icon: "/techstacks/MongoDB.webp", name: "MongoDB", percentage: 65 },
+    { icon: "/techstacks/Node.js.webp", name: "Node.js", percentage: 70 },
+    { icon: "/techstacks/Git.webp", name: "Git", percentage: 50 },
+    { icon: "/techstacks/GitHub.webp", name: "GitHub", percentage: 70 },
+    { icon: "/techstacks/Postman.webp", name: "Postman", percentage: 65 },
+    { icon: "/techstacks/Visual Studio Code (VS Code).webp", name: "VS Code", percentage: 75 }
   ];
 
   return (

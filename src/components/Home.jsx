@@ -38,11 +38,11 @@ const Home = () => {
   }, []);
 
   return (
-    <main id="home" className="relative z-10 flex justify-around items-center h-screen mt-4 md:px-24 px-5 bg-transparent">
+    <main id="home" className="relative z-10 flex justify-around items-center md:h-screen min-h-screen mt-4 md:px-24 px-5 bg-transparent">
 
-      <div ref={leftBoxRef} className='flex flex-col 2xl:gap-6 md:gap-2 gap-2'>
+      <div ref={leftBoxRef} className='flex flex-col 2xl:gap-6 md:gap-2 gap-3'>
 
-        <span className='left-animate 2xl:text-3xl w-fit flex justify-between items-center gap-2 text-white font-extralight shadow-xl bg-white/10 py-2 px-5 rounded-3xl mb-1 md:mb-2'>
+        <span className='left-animate animate-bounce 2xl:text-3xl w-fit flex justify-between items-center gap-2 text-white font-extralight shadow-xl bg-white/10 py-2 px-5 rounded-3xl mb-1 md:mb-2'>
           <AiOutlineRise className="2xl:text-3xl md:text-2xl text-xl text-white" /> Innovating Everyday
         </span>
 
@@ -56,7 +56,7 @@ const Home = () => {
         </p>
         <div className='left-animate flex gap-3 mb-2 md:mb-1'>
           {["React", "Tailwind CSS", "GSAP"].map(skill => (
-            <span key={skill} className='text-white bg-white/20 px-4 2xl:text-xl font-extralight 2xl:tracking-widest md:text-sm tracking-wider text-[14px] py-1 rounded-2xl'>{skill}</span>
+            <span key={skill} className='text-white bg-white/20 px-4 2xl:text-xl font-light 2xl:tracking-widest md:text-sm tracking-wider text-[14px] py-1 rounded-2xl'>{skill}</span>
           ))}
         </div>
 

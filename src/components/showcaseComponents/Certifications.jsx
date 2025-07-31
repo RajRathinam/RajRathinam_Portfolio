@@ -21,10 +21,10 @@ const Certifications = () => {
   }, { scope: containerRef });
 
   const certificates = [
-    "/certificate/c1.jpg", "/certificate/c2.jpg", "/certificate/c3.jpg",
-    "/certificate/d1.jpg", "/certificate/d2.jpg", "/certificate/d3.jpg", "/certificate/d4.jpg", "/certificate/d5.jpg", "/certificate/d6.jpg",
-    "/certificate/cc1.jpg", "/certificate/cc2.jpg", "/certificate/cc3.jpg", "/certificate/cc4.jpg", "/certificate/cc5.jpg", "/certificate/cc6.jpg", "/certificate/cc7.jpg", "/certificate/cc8.jpg", "/certificate/cc9.jpg",
-    "/certificate/vir1.jpg", "/certificate/vir2.jpg", "/certificate/vir3.jpg",
+    "/certificates/c1.webp", "/certificates/c2.webp", "/certificates/c3.webp",
+    "/certificates/d1.webp", "/certificates/d2.webp", "/certificates/d3.webp", "/certificates/d4.webp", "/certificates/d5.webp", "/certificates/d6.webp",
+    "/certificates/cc1.webp", "/certificates/cc2.webp", "/certificates/cc3.webp", "/certificates/cc4.webp", "/certificates/cc5.webp", "/certificates/cc6.webp", "/certificates/cc7.webp", "/certificates/cc8.webp", "/certificates/cc9.webp",
+    "/certificates/vir1.webp", "/certificates/vir2.webp", "/certificates/vir3.webp",
   ];
 
   return (

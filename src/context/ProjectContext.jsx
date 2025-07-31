@@ -6,7 +6,7 @@ const ProjectContext = createContext();
 export const ProjectProvider = ({ children }) => {
   const [projects, setProjects] = useState([
     {
-      homePage: "/project/project1.png",
+      homePage: "/project/project1.webp",
       name: "Permiso",
       projectName: "Student Request Management System",
       simpleIntro: "An institutional system for managing student on-duty and leave requests.",
@@ -32,17 +32,17 @@ export const ProjectProvider = ({ children }) => {
       liveDemoLink: "https://permiso-vanilla-1.onrender.com/",
       githubLink: "https://github.com/RajRathinam/permiso_vanilla/tree/master",
       images: [
-        "/project/permiso/scr1.png",
-        "/project/permiso/scr2.png", 
-        "/project/permiso/scr3.png", 
-        "/project/permiso/scr4.png",
-        "/project/permiso/scr6.png", 
-        "/project/permiso/scr7.png",
-        "/project/permiso/scr8.png",
+        "/project/permiso/scr1.webp",
+        "/project/permiso/scr2.webp", 
+        "/project/permiso/scr3.webp", 
+        "/project/permiso/scr4.webp",
+        "/project/permiso/scr6.webp", 
+        "/project/permiso/scr7.webp",
+        "/project/permiso/scr8.webp",
       ]
     },
     {
-      homePage: "/project/project2.png",
+      homePage: "/project/project2.webp",
       name: "ChatsApp",
       projectName: "MERN Realtime Chat App",
       simpleIntro: "A secure real-time chat app with user auth and live messaging features.",
@@ -67,17 +67,17 @@ export const ProjectProvider = ({ children }) => {
       liveDemoLink: "https://mern-chatsapp.onrender.com/",
       githubLink: "https://github.com/RajRathinam/mern_chatsapp/tree/master",
       images: [
-        "/project/chatsapp/scr1.png",
-        "/project/chatsapp/scr2.png", 
-        "/project/chatsapp/scr3.png", 
-        "/project/chatsapp/scr4.png",
-        "/project/chatsapp/scr5.png", 
-        "/project/chatsapp/scr6.png", 
-        "/project/chatsapp/scr7.png",
+        "/project/chatsapp/scr1.webp",
+        "/project/chatsapp/scr2.webp", 
+        "/project/chatsapp/scr3.webp", 
+        "/project/chatsapp/scr4.webp",
+        "/project/chatsapp/scr5.webp", 
+        "/project/chatsapp/scr6.webp", 
+        "/project/chatsapp/scr7.webp",
       ]
     },
     {
-      homePage: "/project/project3.png",
+      homePage: "/project/project3.webp",
       name: "Vedha Clothing",
       projectName: "Admin & Showcase Platform",
       simpleIntro: "A product showcase platform with admin features for a clothing brand.",
@@ -102,14 +102,14 @@ export const ProjectProvider = ({ children }) => {
       liveDemoLink: "https://vedhaclothing.in/",
       githubLink: "https://github.com/RajRathinam/VedhaClothing",
       images: [
-         "/project/vedha/scr1.png",
-        "/project/vedha/scr2.png", 
-        "/project/vedha/scr3.png", 
-        "/project/vedha/scr4.png",
+         "/project/vedha/scr1.webp",
+        "/project/vedha/scr2.webp", 
+        "/project/vedha/scr3.webp", 
+        "/project/vedha/scr4.webp",
       ]
     },
     {
-      homePage: "/project/project4.png",
+      homePage: "/project/project4.webp",
       name: "Book Worm Haven",
       projectName: "Digital Book Recommender",
       simpleIntro: "A personal book management and discovery platform for readers.",
@@ -130,9 +130,9 @@ export const ProjectProvider = ({ children }) => {
       liveDemoLink: "https://book-worm-haven.netlify.app/",
       githubLink: "https://github.com/RajRathinam/Book-Worm-Haven",
       images: [
-         "/project/book/scr1.png",
-        "/project/book/scr2.png", 
-        "/project/book/scr3.png", 
+         "/project/book/scr1.webp",
+        "/project/book/scr2.webp", 
+        "/project/book/scr3.webp", 
       ]
     }
   ]); // You can prefill or set dynamically
