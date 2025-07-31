@@ -145,11 +145,11 @@ const AboutMe = () => {
             goal is to deliver impactful solutions that truly stand out.
           </p>
 
-          <div className="left-animate flex justify-between gap-3 mt-5 md:mt-5 md:justify-start">
+          <div className="left-animate flex justify-between mt-5 md:mt-5 md:justify-start">
             <a
               href="/Raj_Rathinam_Resume.pdf"
               download
-              className="md:py-2 md:px-4 px-6 py-2 2xl:text-2xl 2xl:px-6 2xl:py-3 text-md border border-white/10 rounded-md flex gap-2 items-center 
+              className="md:py-2 md:px-4 px-6 py-2 2xl:text-2xl 2xl:px-6 2xl:py-3 text-[15px] border border-white/10 rounded-md flex gap-2 items-center 
               bg-gradient-to-r from-[#b0e0f3] to-[#acaaff] text-black 
               transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105"
             >
@@ -158,7 +158,7 @@ const AboutMe = () => {
 
             <a
               href="#showcase"
-              className="md:py-2 md:px-4 px-6 py-2 2xl:text-2xl 2xl:px-6 2xl:py-3 text-md text-white border border-white 
+              className="md:py-2 md:px-4 px-6 py-2 2xl:text-2xl 2xl:px-6 2xl:py-3 text-[15px] text-white border border-white 
               rounded-md flex gap-2 items-center 
               transition-all duration-500 ease-in-out 
               hover:bg-gradient-to-r from-[#b0e0f3] to-[#acaaff] hover:text-black 

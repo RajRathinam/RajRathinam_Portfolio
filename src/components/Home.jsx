@@ -85,7 +85,7 @@ const Home = () => {
       </div>
       <div className='hidden md:block 2xl:block' ref={imageRef}>
         <img
-          src="/Programming.webp"
+          src="/Programming.gif"
           alt="Programming"
           className='2xl:hidden w-80 h-80 object-contain'
         />
