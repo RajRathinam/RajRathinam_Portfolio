@@ -43,12 +43,12 @@ const TechStack = () => {
   ];
 
   return (
-    <section ref={stackRef} className="flex flex-col items-center">
-      <div className="flex flex-wrap justify-center gap-6 max-w-6xl w-full">
+    <section ref={stackRef} className="flex flex-col md:py-8 py-2 items-center">
+      <div className="flex flex-wrap justify-center gap-6 2xl:max-w-7xl max-w-6xl w-full">
         {techStack.map((tech, index) => (
           <div
             key={index}
-            className="tech-box relative w-[26%] md:w-[10%] flex flex-col items-center justify-center px-3 py-4 border border-white/10 rounded-lg bg-gradient-to-t from-white/10 to-transparent text-white"
+            className="tech-box relative w-[26%] md:w-[10%] 2xl:w-[15%] flex flex-col items-center justify-center px-3 py-4 2xl:py-7 border border-white/10 rounded-lg bg-gradient-to-t from-white/10 to-transparent text-white"
             onClick={() => setActiveIndex(activeIndex === index ? null : index)}
             onMouseLeave={() => setActiveIndex(null)}
           >
@@ -61,8 +61,8 @@ const TechStack = () => {
               {tech.percentage}% - Proficient
             </span>
 
-            <img src={tech.icon} alt={tech.name} className="w-8 h-8 md:w-10 md:h-10 object-contain mb-2" />
-            <p className="text-xs md:text-sm font-light text-center">{tech.name}</p>
+            <img src={tech.icon} alt={tech.name} className="w-8 h-8 md:w-10 md:h-10 2xl:w-20 2xl:h-20 object-contain mb-2" />
+            <p className="text-xs md:text-sm 2xl:text-2xl font-light text-center">{tech.name}</p>
           </div>
         ))}
       </div>

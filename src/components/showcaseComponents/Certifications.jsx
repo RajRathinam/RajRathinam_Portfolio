@@ -28,16 +28,16 @@ const Certifications = () => {
   ];
 
   return (
-    <section ref={containerRef} className="flex flex-wrap justify-between gap-4">
+    <section ref={containerRef} className="flex flex-wrap justify-between gap-4 md:py-8 py-2">
       {certificates.map((certificate, index) => (
         <div
           key={index}
           ref={(el) => (cardsRef.current[index] = el)}
-          className="w-full flex items-center sm:w-[48%] md:w-[32%] border border-white/10 p-4 rounded-md bg-gradient-to-t from-white/10 to-transparent text-white"
+          className="w-full flex items-center sm:w-[48%] md:w-[32%] 2xl:w-[24%] border border-white/10 p-4 rounded-md bg-gradient-to-t from-white/10 to-transparent text-white"
         >
           <img
             src={certificate}
-            className="rounded-md max-h-60 mx-auto transition-all duration-200 hover:scale-105"
+            className="rounded-md max-h-60 2xl:max-h-80 w-full mx-auto transition-all duration-200 hover:scale-105"
             alt={`Certificate ${index + 1}`}
           />
         </div>

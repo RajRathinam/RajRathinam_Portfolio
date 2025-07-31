@@ -24,7 +24,7 @@ const Projects = () => {
   }, { scope: container });
 
   return (
-    <section ref={container} className="flex flex-wrap justify-between gap-4 px-4 py-8">
+    <section ref={container} className="flex flex-wrap justify-between gap-4 md:py-8 py-2">
       {projects.map((project, index) => (
         <div
           key={index}
@@ -36,20 +36,20 @@ const Projects = () => {
             className="rounded-md mb-3"
             alt={project.name}
           />
-          <h1 className="font-bold text-md mb-2.5">{project.name}</h1>
-          <p className="font-light text-[11px] mb-3">{project.simpleIntro}</p>
+          <h1 className="font-bold 2xl:text-2xl text-md mb-2.5">{project.name}</h1>
+          <p className="font-light 2xl:text-xl 2xl:text-white/70 text-[11px] mb-3">{project.simpleIntro}</p>
           <div className="flex justify-between items-center">
             <a
               href={project.liveDemoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm flex items-center gap-1 hover:text-[#9694f0] text-[#c0bfffc7]"
+              className="2xl:text-2xl text-sm flex items-center gap-1 hover:text-[#9694f0] text-[#c0bfffc7]"
             >
               Live Demo <LuExternalLink />
             </a>
             <Link
               to={`/project-details/${index}`}
-              className="text-sm cursor-pointer flex items-center gap-1 bg-white/10 rounded-sm py-1 px-3 text-white/80 hover:text-white"
+              className="2xl:text-2xl 2xl:px-5 2xl:py-2 text-sm cursor-pointer flex items-center gap-1 bg-white/10 rounded-sm py-1 px-3 text-white/80 hover:text-white"
             >
               Details <IoMdArrowForward />
             </Link>
