@@ -11,7 +11,7 @@ const Footer = () => {
         </p>
 
         {/* Right - Social links */}
-        <div className="md:flex hidded gap-6">
+        <div className="md:flex hidden gap-6">
           <a
             href="mailto:rajrathinam2005@gmail.com"
             target="_blank"
