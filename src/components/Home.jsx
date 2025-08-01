@@ -64,7 +64,7 @@ const Home = () => {
           <a href='#showcase' className='bg-[#0404228e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-xl 2xl:px-6 2xl:py-3 md:text-md text-[14px]  hover:bg-[#1b1b2fd8] cursor-pointer flex gap-2 items-center text-white px-4 py-2'>
             View Projects <FaCode />
           </a>
-          <a href='#' className='bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-xl 2xl:px-6 2xl:py-3 md:text-md text-[14px] hover:bg-[#1b1b2fd8] flex cursor-pointer gap-2 items-center text-white px-4 py-2'>
+          <a href='#contact' className='bg-[#1b1b2f8e] hover:shadow-[0_0_8px_#ffffffaa] 2xl:text-xl 2xl:px-6 2xl:py-3 md:text-md text-[14px] hover:bg-[#1b1b2fd8] flex cursor-pointer gap-2 items-center text-white px-4 py-2'>
             Contact Me <MdOutlineContactMail />
           </a>
         </div>
