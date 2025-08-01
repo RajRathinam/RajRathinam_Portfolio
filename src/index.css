@@ -49,3 +49,18 @@ html {
 .custom-swiper .swiper-button-next::after {
   font-size: 14px !important; /* Icon size */
 }
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset !important;
+}

@@ -1,24 +1,12 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Certifications = () => {
   const containerRef = useRef(null);
-  const cardsRef = useRef([]);
-
- 
-  useGSAP(() => {
-    gsap.from(cardsRef.current, {
-      x:-100,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      stagger: 0.15,
-    });
-  }, { scope: containerRef });
 
   const certificates = [
     "/certificates/c1.webp", "/certificates/c2.webp", "/certificates/c3.webp",
@@ -27,13 +15,30 @@ const Certifications = () => {
     "/certificates/vir1.webp", "/certificates/vir2.webp", "/certificates/vir3.webp",
   ];
 
+  useGSAP(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".certificate-card", {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+     x:-100,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.15,
+      });
+    }, containerRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section ref={containerRef} className="flex flex-wrap justify-between gap-4 py-2">
       {certificates.map((certificate, index) => (
         <div
           key={index}
-          ref={(el) => (cardsRef.current[index] = el)}
-          className="w-full flex items-center sm:w-[48%] md:w-[32%] 2xl:w-[24%] border border-white/10 p-4 rounded-md bg-gradient-to-t from-white/10 to-transparent text-white"
+          className="certificate-card w-full flex items-center sm:w-[48%] md:w-[32%] 2xl:w-[24%] border border-white/10 p-4 rounded-md bg-gradient-to-t from-white/10 to-transparent text-white"
         >
           <img
             src={certificate}

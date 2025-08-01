@@ -5,6 +5,8 @@ import TechStack from './showcaseComponents/TechStack';
 import { IoMdCode } from "react-icons/io";
 import { TbCertificate } from "react-icons/tb";
 import { PiStackBold } from "react-icons/pi";
+import { TbNorthStar } from "react-icons/tb";
+
 
 const Showcase = () => {
   const [sections, setSections] = useState("projects");
@@ -16,8 +18,11 @@ const Showcase = () => {
           Portfolio Showcase
         </h1>
         <p className="flex 2xl:text-white/40 2xl:text-xl 2xl:tracking-widest 2xl:mt-3 text-white font-extralight text-[12px] gap-2">
-          Explore my journey through projects, certifications, and technical expertise.<span className='hidden'>Each section represents a milestone in my continuous learning path.</span>
-        </p>
+            <TbNorthStar className="text-[#acaaff]" />
+                   Explore my journey through projects, certifications, and technical expertise.<span className='hidden'>Each section represents a milestone in my continuous learning path.</span>
+             <TbNorthStar className="text-[#acaaff]" />
+        
+       </p>
       </div>
 
       <div className='flex gap-2 md:gap-5 bg-black/20 border-1 border-white/20 md:p-2 rounded-md'>

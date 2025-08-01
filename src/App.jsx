@@ -7,8 +7,9 @@ import ProjectDetail from './components/showcaseComponents/ProjectDetail';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop';
 import { ProjectProvider } from './context/ProjectContext';
-
+import { Toaster } from 'react-hot-toast';
 import './index.css'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
 
       <div className="relative z-10">
         <ProjectProvider>
+            <Toaster position="top-center" reverseOrder={false} />
           <Router>
             <NavBar />
             <ScrollToTop />
@@ -74,6 +76,7 @@ function App() {
               <Route path="/" element={<All />} />
               <Route path="/project-details/:id" element={<ProjectDetail />} />
             </Routes>
+            <Footer/>
           </Router>
         </ProjectProvider>
       </div>
