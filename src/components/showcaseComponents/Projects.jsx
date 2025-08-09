@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { LuExternalLink } from "react-icons/lu";
 import { IoMdArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useProjectContext } from '../../context/ProjectContext'; // Adjust the path as needed
+import { useProjectContext } from '../../context/ProjectContext'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
