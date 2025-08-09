@@ -1,30 +1,27 @@
-import { useState, useEffect,useRef } from 'react';
-import React from 'react';
-import NavBar from './components/NavBar';
-import All from './components/All';
-import Preloader from './components/Preloader';
-import ProjectDetail from './components/showcaseComponents/ProjectDetail';
+import { useState, useEffect, useRef } from "react";
+import React from "react";
+import NavBar from "./components/NavBar";
+import All from "./components/All";
+import Preloader from "./components/Preloader";
+import ProjectDetail from "./components/showcaseComponents/ProjectDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from './components/ScrollToTop';
-import { ProjectProvider } from './context/ProjectContext';
-import { Toaster } from 'react-hot-toast';
-import './index.css'
-import Footer from './components/Footer'
-
+import ScrollToTop from "./components/ScrollToTop";
+import { ProjectProvider } from "./context/ProjectContext";
+import { Toaster } from "react-hot-toast";
+import "./index.css";
+import Footer from "./components/Footer";
 
 function App() {
   const [shapeCount, setShapeCount] = useState(90);
-  
+
   const [showContent, setShowContent] = useState(false);
-   useEffect(() => {
-  const timer = setTimeout(() => {
-       setShowContent(true);
-     setShapeCount(40);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+      setShapeCount(40);
     }, 4000);
-     return () => clearTimeout(timer);
-   }, []);
-
-
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -51,24 +48,22 @@ function App() {
     return () => document.body.removeChild(script);
   }, [shapeCount]);
 
-
   if (!showContent) {
-     return (
-     <div className="flex justify-center items-center fixed inset-0 bg-[#48488b]">
-       <Preloader/>
-     </div>
+    return (
+      <div className="flex justify-center items-center fixed inset-0 bg-[#48488b]">
+        <Preloader />
+      </div>
     );
   }
 
-
   return (
-   <div className="relative w-full min-h-screen overflow-auto">
+    <div className="relative w-full min-h-screen overflow-auto">
       <div className="finisher-header fixed inset-0 -z-10"></div>
       <div className="fixed inset-0 -z-20 bg-[#48488b]"></div>
 
       <div className="relative z-10">
         <ProjectProvider>
-            <Toaster position="top-center" reverseOrder={false} />
+          <Toaster position="top-center" reverseOrder={false} />
           <Router>
             <NavBar />
             <ScrollToTop />
@@ -76,7 +71,7 @@ function App() {
               <Route path="/" element={<All />} />
               <Route path="/project-details/:id" element={<ProjectDetail />} />
             </Routes>
-            <Footer/>
+            <Footer />
           </Router>
         </ProjectProvider>
       </div>

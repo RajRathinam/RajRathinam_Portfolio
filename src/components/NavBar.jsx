@@ -1,39 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { RiMenu4Line, RiCloseLine } from "react-icons/ri";
-import { Link as ScrollLink } from 'react-scroll';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../index.css';
 
-const NavBar = () => {
+const NavBar = ({ setLoading }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(-100);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const toggleMenu = () => setShowMenu(!showMenu);
 
   useEffect(() => {
-    // Scroll effect for header shadow
-    const scrollContainer = document.querySelector('.scroll-container') || window;
     const onScroll = () => {
-      setIsScrolled(scrollContainer.scrollTop > 4 || window.scrollY > 4);
+      setIsScrolled(window.scrollY > 4);
     };
-    scrollContainer.addEventListener('scroll', onScroll, { passive: true });
-
-    return () => scrollContainer.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+
   useEffect(() => {
-    // Responsive scroll offset based on screen width
     const updateOffset = () => {
       const width = window.innerWidth;
-      if (width < 768) {
-        setScrollOffset(-70); // mobile
-      } else if (width >= 1366 && width < 1920) {
-        setScrollOffset(-50); // md screens
-      } else {
-        setScrollOffset(-110); // xl, 2xl
-      }
+      if (width < 768) setScrollOffset(-70);
+      else if (width >= 1366 && width < 1920) setScrollOffset(-50);
+      else setScrollOffset(-110);
     };
-
     updateOffset();
     window.addEventListener("resize", updateOffset);
     return () => window.removeEventListener("resize", updateOffset);
@@ -46,6 +41,38 @@ const NavBar = () => {
     { label: "Contact", to: "contact" },
   ];
 
+  const handleNavClick = (id) => {
+    setShowMenu(false);
+    setLoading?.(true);
+
+    if (location.pathname === "/") {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY + scrollOffset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+        setLoading?.(false);
+      }, 300);
+    } else {
+      navigate("/", { state: { scrollTo: id } });
+    }
+  };
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const id = location.state.scrollTo;
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY + scrollOffset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+        setLoading?.(false);
+      }, 300);
+    }
+  }, [location, scrollOffset, setLoading]);
+
   return (
     <header
       className={`fixed left-0 top-0 right-0 z-20 flex justify-between 
@@ -53,55 +80,45 @@ const NavBar = () => {
         transition-shadow duration-300
         ${isScrolled ? 'backdrop-blur-md shadow-[0_4px_8px_rgba(255,255,255,0.4)]' : 'bg-transparent shadow-none'}`}
     >
-      {/* Logo */}
       <h1 className='text-white poppins text-xl 2xl:text-4xl font-bold tracking-wider'>
         &lt;Raj Rathinam/&gt;
       </h1>
 
-      {/* Desktop Navigation */}
       <ul className="md:flex hidden md:gap-6 text-white poppins font-light tracking-wide">
-        {navItems.map((item, index) => (
-          <li key={index} className="relative group cursor-pointer md:p-2 md:px-4 rounded-xl">
-            <ScrollLink
-              to={item.to}
-              smooth={true}
-              duration={500}
-              offset={scrollOffset}
+        {navItems.map((item, i) => (
+          <li key={i} className="relative group cursor-pointer md:p-2 md:px-4 rounded-xl">
+            <button
+              onClick={() => handleNavClick(item.to)}
               className="relative text-white 2xl:text-xl 2xl:font-extralight group-hover:text-[#acaaffcc] 
               after:content-[''] after:absolute after:left-0 after:-bottom-1 
               after:w-0 after:h-[2px] after:bg-[#acaaff] after:transition-all 
               after:duration-300 group-hover:after:w-full cursor-pointer"
             >
               {item.label}
-            </ScrollLink>
+            </button>
           </li>
         ))}
       </ul>
 
-      {/* Hamburger Menu Icon */}
+      
       <div className='md:hidden text-white text-3xl cursor-pointer' onClick={toggleMenu}>
         {showMenu ? <RiCloseLine /> : <RiMenu4Line />}
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {showMenu && (
         <ul className='absolute top-full left-0 w-full bg-[#48488b]/70 backdrop-blur-md shadow-md
           flex flex-col items-center text-white poppins font-bold tracking-wide md:hidden transition-all duration-300'>
-          {navItems.map((item, index) => (
+          {navItems.map((item, i) => (
             <li
-              key={index}
+              key={i}
               className='cursor-pointer border-b border-white/20 hover:bg-white/20 w-full text-center p-4'
             >
-              <ScrollLink
-                to={item.to}
-                smooth={true}
-                duration={500}
-                offset={-70} // Fixed offset for mobile menu
-                onClick={toggleMenu}
+              <button
+                onClick={() => handleNavClick(item.to)}
                 className="block w-full"
               >
                 {item.label}
-              </ScrollLink>
+              </button>
             </li>
           ))}
         </ul>
